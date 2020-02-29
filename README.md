@@ -1,4 +1,4 @@
-# Army Number Search:
+# Army Number Search
 Army number is able to search the following:
 
 * British Regimental Number blocks issued from the 1920's - 1945
