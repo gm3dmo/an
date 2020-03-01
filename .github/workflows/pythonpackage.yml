@@ -1,11 +1,5 @@
 name: Test the Army Number app
-
 on: [push]
-
-
-      - name: Get current date
-        id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 jobs:
   build:
 
