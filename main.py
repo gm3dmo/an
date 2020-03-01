@@ -207,7 +207,7 @@ def create_app(config=None):
     @app.route("/")
     def hello_world():
         logger.info("/")
-        return ""
+        return "Army number search tool"
 
     @app.route("/army-number/<someId>")
     def foo_url_arg(someId):
