@@ -2,6 +2,10 @@ name: Python package
 
 on: [push]
 
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 jobs:
   build:
 
@@ -11,6 +15,9 @@ jobs:
         python-version: [3.6, 3.8]
 
     steps:
+    - name: Get current date
+       id: date
+       run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
