@@ -10,7 +10,7 @@ jobs:
 
     steps:
     - name: Get current date
-       id: date
+        id: date
        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
