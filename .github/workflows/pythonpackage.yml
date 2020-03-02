@@ -9,6 +9,9 @@ jobs:
       matrix:
         python-version: [3.6, 3.8]
 
+     env:
+       my_env_var: ${{ "panda" }}
+
     steps:
     - uses: actions/checkout@v2
 
@@ -16,6 +19,8 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+
+
 
     - name: Get current date
         id: dateski
