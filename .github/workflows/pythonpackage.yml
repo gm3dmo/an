@@ -3,6 +3,7 @@ on: [push]
 jobs:
   build:
 
+    # Spins up a VM running ubuntu and installs versions of python:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,9 +17,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Get current date
-       id: date
-      run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+    #- name: Get current date
+    #   id: date
+    #  run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
 
     - name: Install dependencies
       run: |
