@@ -19,7 +19,7 @@ jobs:
 
     - name: Get current date
         id: dateski
-       run: echo "::set-env name=date::$(date +'%Y-%m-%d')"
+       run: echo "hello date"
 
     - name: Install dependencies
       run: |
