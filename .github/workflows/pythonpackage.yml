@@ -9,9 +9,6 @@ jobs:
       matrix:
         python-version: [3.6, 3.8]
 
-     env:
-       my_env_var: ${{ "panda" }}
-
     steps:
     - uses: actions/checkout@v2
 
@@ -20,11 +17,9 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-
-
-    - name: Get current date
-        id: dateski
-       run: echo "hello date"
+#    - name: Get current date
+#       id: dateski
+#      run: echo "hello date"
 
     - name: Install dependencies
       run: |
