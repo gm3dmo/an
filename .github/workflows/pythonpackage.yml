@@ -18,7 +18,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
 
     - name: Get current date
-        id: date
+        id: dateski
        run: echo "::set-env name=date::$(date +'%Y-%m-%d')"
 
     - name: Install dependencies
