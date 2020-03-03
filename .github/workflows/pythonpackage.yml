@@ -16,6 +16,10 @@ jobs:
       run: echo ::set-env name=DATE::$(date +'%Y-%m-%d')
     - name: Test
       run: echo $DATE
+    
+    - name: show us the filesystem config
+      run: |
+        cat /etc/mke2fs.conf
 
     - name: Set up Python ${{ matrix.python-version }}
         
