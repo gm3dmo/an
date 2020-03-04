@@ -205,7 +205,7 @@ def create_app(config=None):
     # Definition of the routes. Put them into their own file. See also
     # Flask Blueprints: http://flask.pocoo.org/docs/latest/blueprints
     @app.route("/")
-    def hello_world():
+    def home():
         logger.info("/")
         return render_template("home.html")
 
