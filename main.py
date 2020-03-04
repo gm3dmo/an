@@ -6,7 +6,7 @@ See also https://www.python-boilerplate.com/flask
 """
 import os
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 from logzero import logger
 
@@ -207,7 +207,7 @@ def create_app(config=None):
     @app.route("/")
     def hello_world():
         logger.info("/")
-        return "Army number search tool"
+        return render_template("home.html")
 
     @app.route("/army-number/<someId>")
     def foo_url_arg(someId):
