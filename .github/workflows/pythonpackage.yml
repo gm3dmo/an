@@ -12,14 +12,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Dump matrix context
+       env:
+          MATRIX_CONTEXT: ${{ toJson(matrix) }}
+      run: echo "$MATRIX_CONTEXT"
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-
-#    - name: Get current date
-#       id: dateski
-#      run: echo "hello date"
 
     - name: Install dependencies
       run: |
