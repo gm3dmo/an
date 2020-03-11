@@ -13,7 +13,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Dump matrix context
-       env:
+      env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
       run: echo "$MATRIX_CONTEXT"
 
