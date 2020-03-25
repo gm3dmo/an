@@ -6,7 +6,6 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -18,12 +17,12 @@ jobs:
           - engine: make-me-ghost # comment me out or add to engine axis
             other: 321
 
+    runs-on: ${{ matrix.os }}
     steps:
       - run: echo Done ${{ matrix.other }}
 
 
   build:
-    runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -33,5 +32,6 @@ jobs:
           - engine: used
             other: 123
 
+    runs-on: ${{ matrix.os }}
     steps:
       - run: echo Done ${{ matrix.other }}
