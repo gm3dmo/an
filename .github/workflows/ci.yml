@@ -10,12 +10,6 @@ jobs:
       fail-fast: false
       matrix:
         os: [macos-latest, windows-latest]
-        engine: [used]
-        include:
-          - engine: used
-            other: 123
-          - engine: make-me-ghost # comment me out or add to engine axis
-            other: 321
 
     runs-on: ${{ matrix.os }}
     steps:
