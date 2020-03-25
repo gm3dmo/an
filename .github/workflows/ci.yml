@@ -20,18 +20,3 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - run: echo Done ${{ matrix.other }}
-
-
-  build:
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [macos-latest, windows-latest]
-        engine: [used]
-        include:
-          - engine: used
-            other: 123
-
-    runs-on: ${{ matrix.os }}
-    steps:
-      - run: echo Done ${{ matrix.other }}
