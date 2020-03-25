@@ -5,6 +5,7 @@ jobs:
 
     # Spins up a VM running ubuntu and installs versions of python:
     runs-on: ubuntu-latest
+    bananashake
     strategy:
       matrix:
         python-version: [3.6, 3.8]
